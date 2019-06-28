@@ -31,6 +31,7 @@ function computeScore (game) {
     return 0
   }
 
+  return sumPinsKnocked(game)
   if (game.toString() === [9, 9, 9, 9, 9, 9, 9, 9, 9, 9].toString()) {
     return 90
   }
@@ -39,4 +40,8 @@ function computeScore (game) {
 
 function noPinsKnocked(game) {
   return game.toString() === NO_PIN_DOWN_GAME.toString()
+}
+
+function sumPinsKnocked(game) {
+  return game.reduce(add, 0)
 }
