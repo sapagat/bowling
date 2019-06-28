@@ -22,6 +22,14 @@ describe('Bowling', () => {
 
     expect(score).toEqual(40)
   })
+
+  it('computes spare', () => {
+    const game = [4, 6, 1]
+
+    const score = computeScore(game)
+
+    expect(score).toEqual(12)
+  })
 })
 
 function computeScore (game) {
