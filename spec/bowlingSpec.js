@@ -27,7 +27,7 @@ describe('Bowling', () => {
 const NO_PIN_DOWN_GAME = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 function computeScore (game) {
-  if (game === NO_PIN_DOWN_GAME) {
+  if (game == NO_PIN_DOWN_GAME) {
     return 0
   }
 
