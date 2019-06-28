@@ -6,6 +6,14 @@ describe('Bowling', () => {
 
     expect(score).toEqual(0)
   })
+
+  it('scores one point if only one pin knocked in the game', () => {
+    const singlePinDown = '-- -- -- -- 1- -- -- -- -- --'
+
+    const score = computeScore(singlePinDown)
+
+    expect(score).toEqual(1)
+  })
 })
 
 function computeScore () {
