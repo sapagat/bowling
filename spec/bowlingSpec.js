@@ -35,10 +35,11 @@ describe('Bowling', () => {
 const FIRST_POSITION=0
 const SECOND_POSITION=1
 const THIRD_POSITION=2
+const SPARE = 10
 
 function computeScore (game) {
-  if (game[FIRST_POSITION] + game[SECOND_POSITION] === 10) {
-    return 10 + game[THIRD_POSITION] + game[THIRD_POSITION]
+  if (game[FIRST_POSITION] + game[SECOND_POSITION] === SPARE) {
+    return SPARE + game[THIRD_POSITION] + game[THIRD_POSITION]
   }
   return sumPinsKnocked(game)
 }
