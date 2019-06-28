@@ -24,14 +24,8 @@ describe('Bowling', () => {
   })
 })
 
-const NO_PIN_DOWN_GAME = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
 function computeScore (game) {
   return sumPinsKnocked(game)
-}
-
-function noPinsKnocked(game) {
-  return game.toString() === NO_PIN_DOWN_GAME.toString()
 }
 
 function sumPinsKnocked(game) {
