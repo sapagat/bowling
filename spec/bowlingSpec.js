@@ -1,6 +1,6 @@
 describe('Bowling', () => {
   it('scores no points when no pins knocked in the game', () => {
-    const noPinsKnockedGame = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    const noPinsKnockedGame = [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
 
     const score = computeScore(noPinsKnockedGame)
 
@@ -8,7 +8,7 @@ describe('Bowling', () => {
   })
 
   it('scores one point if only one pin knocked in the game', () => {
-    const singlePinKnockedGame = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    const singlePinKnockedGame = [[0, 0], [0, 0], [1, 0], [0, 0], [0, 0]]
 
     const score = computeScore(singlePinKnockedGame)
 
@@ -16,7 +16,7 @@ describe('Bowling', () => {
   })
 
   it('sums the pins knocked in each roll of the game', () => {
-    const game = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+    const game = [[2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2], [2, 2]]
 
     const score = computeScore(game)
 
@@ -24,7 +24,7 @@ describe('Bowling', () => {
   })
 
   it('computes the score of a game with a spare in the first frame', () => {
-    const game = [4, 6, 1, 1]
+    const game = [[4, 6], [1, 1]]
 
     const score = computeScore(game)
 
@@ -56,8 +56,8 @@ function computeScore (game) {
 }
 
 function isFirstFrameASpare (game) {
-  const firstFrame = game[FIRST_POSITION] + game[SECOND_POSITION]
-  return firstFrame === SPARE
+  const firstFrame = game[FIRST_POSITION]
+  return firstFrame[0] + firstFrame[1] === SPARE
 }
 
 function scoreSpareFrame (nextFrame) {
@@ -66,5 +66,5 @@ function scoreSpareFrame (nextFrame) {
 
 function sumPinsKnocked(game) {
   const pinsKnocked = 0
-  return game.reduce((sum, frame) => sum + frame, pinsKnocked)
+  return game.reduce((sum, frame) => sum + frame[0] + frame[1], pinsKnocked)
 }
