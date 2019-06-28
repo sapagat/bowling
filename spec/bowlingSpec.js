@@ -38,10 +38,14 @@ const THIRD_POSITION=2
 const SPARE = 10
 
 function computeScore (game) {
-  if (game[FIRST_POSITION] + game[SECOND_POSITION] === SPARE) {
+  if (perico(game)) {
     return SPARE + game[THIRD_POSITION] + game[THIRD_POSITION]
   }
   return sumPinsKnocked(game)
+}
+
+function perico (game) {
+  return game[FIRST_POSITION] + game[SECOND_POSITION] === SPARE
 }
 
 function sumPinsKnocked(game) {
