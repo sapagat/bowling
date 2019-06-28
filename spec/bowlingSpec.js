@@ -9,5 +9,5 @@ describe('Bowling', () => {
 })
 
 function computeScore () {
-  
+  return undefined
 }
