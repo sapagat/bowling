@@ -67,7 +67,7 @@ function scoreSpareFrame (nextFrame) {
 
 function sumPinsKnocked(game) {
   const pinsKnocked = 0
-  return game.reduce((sum, frame) => sum + frame[0] + frame[1], pinsKnocked)
+  return game.reduce((sum, rolls) => sum + new Frame(rolls).pinsKnocked(), pinsKnocked)
 }
 
 class Frame {
