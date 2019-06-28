@@ -29,5 +29,6 @@ function computeScore (game) {
 }
 
 function sumPinsKnocked(game) {
-  return game.reduce((sum, element) => sum + element, 0)
+  const pinsKnocked = 0
+  return game.reduce((sum, frame) => sum + frame, pinsKnocked)
 }
