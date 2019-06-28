@@ -32,10 +32,6 @@ function computeScore (game) {
   }
 
   return sumPinsKnocked(game)
-  if (game.toString() === [9, 9, 9, 9, 9, 9, 9, 9, 9, 9].toString()) {
-    return 90
-  }
-  return 1
 }
 
 function noPinsKnocked(game) {
@@ -43,5 +39,5 @@ function noPinsKnocked(game) {
 }
 
 function sumPinsKnocked(game) {
-  return game.reduce((sum, element) => { return sum + element}, 0)
+  return game.reduce((sum, element) => sum + element, 0)
 }
