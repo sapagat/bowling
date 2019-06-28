@@ -45,7 +45,8 @@ function computeScore (game) {
 }
 
 function perico (game) {
-  return game[FIRST_POSITION] + game[SECOND_POSITION] === SPARE
+  const firstFrame = game[FIRST_POSITION] + game[SECOND_POSITION]
+  return firstFrame === SPARE
 }
 
 function sumPinsKnocked(game) {
