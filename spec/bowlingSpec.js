@@ -24,11 +24,11 @@ describe('Bowling', () => {
   })
 
   it('computes spare', () => {
-    const game = [4, 6, 1]
+    const game = [4, 6, 1, 1]
 
     const score = computeScore(game)
 
-    expect(score).toEqual(12)
+    expect(score).toEqual(14)
   })
 })
 
