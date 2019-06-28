@@ -1,6 +1,6 @@
 describe('Bowling', () => {
   it('scores no points when no pins knocked in the game', () => {
-    const noPinsKnockedGame = '-- -- -- -- -- -- -- -- -- --'
+    const noPinsKnockedGame = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     const score = computeScore(noPinsKnockedGame)
 
