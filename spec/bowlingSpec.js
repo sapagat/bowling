@@ -7,3 +7,7 @@ describe('Bowling', () => {
     expect(score).toEqual(0)
   })
 })
+
+function computeScore () {
+  
+}
