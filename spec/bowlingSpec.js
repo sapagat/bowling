@@ -40,9 +40,8 @@ const SPARE = 10
 
 function computeScore (game) {
   if (isFirstFrameASpare(game)) {
-    const secondFrameFirstRoll = game[THIRD_POSITION]
-    const secondFrameSecondRoll = game[FOURTH_POSITION]
-    return scoreSpareFrame(secondFrameFirstRoll + secondFrameSecondRoll) + secondFrameFirstRoll + secondFrameSecondRoll
+    const secondFrame = game[THIRD_POSITION] + game[FOURTH_POSITION]
+    return scoreSpareFrame(secondFrame) + secondFrame
   }
   return sumPinsKnocked(game)
 }
