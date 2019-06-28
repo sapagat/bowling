@@ -57,8 +57,8 @@ function computeScore (game) {
 }
 
 function isFirstFrameASpare (game) {
-  const firstFrame = game[FIRST_POSITION]
-  return firstFrame[0] + firstFrame[1] === SPARE
+  const firstFrame = new Frame(game[FIRST_POSITION])
+  return firstFrame.pinsKnocked() === SPARE
 }
 
 function scoreSpareFrame (nextFrame) {
