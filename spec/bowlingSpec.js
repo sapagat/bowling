@@ -33,6 +33,9 @@ describe('Bowling', () => {
 })
 
 function computeScore (game) {
+  if (game[0] + game[1] === 10) {
+    return 10 + game[2] + game[2]
+  }
   return sumPinsKnocked(game)
 }
 
