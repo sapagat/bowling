@@ -8,7 +8,7 @@ describe('Bowling', () => {
   })
 
   it('scores one point if only one pin knocked in the game', () => {
-    const singlePinKnockedGame = '-- -- -- -- 1- -- -- -- -- --'
+    const singlePinKnockedGame = [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
 
     const score = computeScore(singlePinKnockedGame)
 
