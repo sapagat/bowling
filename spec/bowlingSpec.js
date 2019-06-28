@@ -1,5 +1,9 @@
 describe('Bowling', () => {
-  it('will happen...', () => {
-    expect(true).toEqual(true)
+  it('scores no points when no pins knocked in the game', () => {
+    const noPinsDown = '-- -- -- -- -- -- -- -- -- --'
+
+    const score = computeScore(noPinsDown)
+
+    expect(score).toEqual(0)
   })
 })
