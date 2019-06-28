@@ -22,6 +22,14 @@ describe('Bowling', () => {
 
     expect(score).toEqual(90)
   })
+
+  it('sums the pins knocked in each roll of the game', () => {
+    const game = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+
+    const score = computeScore(game)
+
+    expect(score).toEqual(40)
+  })
 })
 
 function computeScore (game) {
