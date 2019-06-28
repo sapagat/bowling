@@ -27,7 +27,7 @@ describe('Bowling', () => {
 const NO_PIN_DOWN_GAME = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 function computeScore (game) {
-  if (game.toString() === NO_PIN_DOWN_GAME.toString()) {
+  if (noPinsKnocked(game)) {
     return 0
   }
 
@@ -35,4 +35,8 @@ function computeScore (game) {
     return 90
   }
   return 1
+}
+
+function noPinsKnocked(game) {
+  return game.toString() === NO_PIN_DOWN_GAME.toString()
 }
