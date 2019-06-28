@@ -38,13 +38,13 @@ const THIRD_POSITION=2
 const SPARE = 10
 
 function computeScore (game) {
-  if (perico(game)) {
+  if (isFirstFrameASpare(game)) {
     return SPARE + game[THIRD_POSITION] + game[THIRD_POSITION]
   }
   return sumPinsKnocked(game)
 }
 
-function perico (game) {
+function isFirstFrameASpare (game) {
   const firstFrame = game[FIRST_POSITION] + game[SECOND_POSITION]
   return firstFrame === SPARE
 }
