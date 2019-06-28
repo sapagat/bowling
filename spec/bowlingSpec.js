@@ -60,11 +60,22 @@ function isFirstFrameASpare (game) {
   return firstFrame[0] + firstFrame[1] === SPARE
 }
 
-function scoreSpareFrame (nextFrame) {
-  return SPARE + nextFrame[0] + nextFrame[1]
+function scoreSpareFrame (rolls) {
+  const nextFrame = new Frame(rolls)
+  return SPARE + nextFrame.pinsKnocked()
 }
 
 function sumPinsKnocked(game) {
   const pinsKnocked = 0
   return game.reduce((sum, frame) => sum + frame[0] + frame[1], pinsKnocked)
+}
+
+class Frame {
+  constructor(rolls) {
+    this.rolls = rolls
+  }
+
+  pinsKnocked () {
+    return this.rolls[0] + this.rolls[1]
+  }
 }
