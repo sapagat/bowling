@@ -58,7 +58,7 @@ function computeScore (game) {
 
 function isFirstFrameASpare (game) {
   const firstFrame = new Frame(game[FIRST_POSITION])
-  return firstFrame.pinsKnocked() === SPARE
+  return firstFrame.isSpare()
 }
 
 function scoreSpareFrame (nextFrame) {
@@ -77,5 +77,9 @@ class Frame {
 
   pinsKnocked () {
     return this.rolls[0] + this.rolls[1]
+  }
+
+  isSpare () {
+    return this.pinsKnocked() == SPARE
   }
 }
