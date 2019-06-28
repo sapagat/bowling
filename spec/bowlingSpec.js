@@ -1,16 +1,16 @@
 describe('Bowling', () => {
   it('scores no points when no pins knocked in the game', () => {
-    const noPinsDown = '-- -- -- -- -- -- -- -- -- --'
+    const noPinsKnockedGame = '-- -- -- -- -- -- -- -- -- --'
 
-    const score = computeScore(noPinsDown)
+    const score = computeScore(noPinsKnockedGame)
 
     expect(score).toEqual(0)
   })
 
   it('scores one point if only one pin knocked in the game', () => {
-    const singlePinDown = '-- -- -- -- 1- -- -- -- -- --'
+    const singlePinKnockedGame = '-- -- -- -- 1- -- -- -- -- --'
 
-    const score = computeScore(singlePinDown)
+    const score = computeScore(singlePinKnockedGame)
 
     expect(score).toEqual(1)
   })
@@ -18,8 +18,8 @@ describe('Bowling', () => {
 
 const NO_PIN_DOWN_GAME = '-- -- -- -- -- -- -- -- -- --'
 
-function computeScore (pinsDown) {
-  if (pinsDown === NO_PIN_DOWN_GAME) {
+function computeScore (game) {
+  if (game === NO_PIN_DOWN_GAME) {
     return 0
   }
 
