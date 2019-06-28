@@ -35,12 +35,14 @@ describe('Bowling', () => {
 const FIRST_POSITION=0
 const SECOND_POSITION=1
 const THIRD_POSITION=2
+const FOURTH_POSITION=3
 const SPARE = 10
 
 function computeScore (game) {
   if (isFirstFrameASpare(game)) {
     const secondFrameFirstRoll = game[THIRD_POSITION]
-    return scoreSpareFrame(secondFrameFirstRoll) + secondFrameFirstRoll
+    const secondFrameSecondRoll = game[FOURTH_POSITION]
+    return scoreSpareFrame(secondFrameFirstRoll + secondFrameSecondRoll) + secondFrameFirstRoll + secondFrameSecondRoll
   }
   return sumPinsKnocked(game)
 }
