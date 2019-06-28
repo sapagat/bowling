@@ -61,7 +61,7 @@ function isFirstFrameASpare (game) {
 }
 
 function scoreSpareFrame (nextFrame) {
-  return SPARE + nextFrame
+  return SPARE + nextFrame[0] + nextFrame[1]
 }
 
 function sumPinsKnocked(game) {
