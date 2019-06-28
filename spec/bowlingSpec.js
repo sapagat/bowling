@@ -17,5 +17,5 @@ describe('Bowling', () => {
 })
 
 function computeScore () {
-  return 0
+  return 1
 }
