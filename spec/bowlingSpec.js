@@ -23,7 +23,15 @@ describe('Bowling', () => {
     expect(score).toEqual(40)
   })
 
-  it('computes the score of a game with a single spare', () => {
+  it('computes the score of a game with a spare in the first frame', () => {
+    const game = [4, 6, 1, 1]
+
+    const score = computeScore(game)
+
+    expect(score).toEqual(14)
+  })
+
+  xit('computes the score of a game with a single spare', () => {
     const game = [1, 1, 4, 6, 1, 1]
 
     const score = computeScore(game)
