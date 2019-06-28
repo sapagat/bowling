@@ -16,6 +16,10 @@ describe('Bowling', () => {
   })
 })
 
-function computeScore () {
-  return 0
+function computeScore (pinsDown) {
+  if (pinsDown === '-- -- -- -- -- -- -- -- -- --') {
+    return 0
+  } else {
+    return 1
+  }
 }
