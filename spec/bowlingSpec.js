@@ -16,7 +16,7 @@ describe('Bowling', () => {
   })
 
   it('sums the pins knocked in the first roll of each frame', () => {
-    const game = '9- 9- 9- 9- 9- 9- 9- 9- 9- 9-'
+    const game = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 
     const score = computeScore(game)
 
@@ -31,7 +31,7 @@ function computeScore (game) {
     return 0
   }
 
-  if (game === '9- 9- 9- 9- 9- 9- 9- 9- 9- 9-') {
+  if (game.toString() === [9, 9, 9, 9, 9, 9, 9, 9, 9, 9].toString()) {
     return 90
   }
   return 1
