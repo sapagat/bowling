@@ -24,10 +24,10 @@ describe('Bowling', () => {
   })
 })
 
-const NO_PIN_DOWN_GAME = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+const NO_PIN_DOWN_GAME = ['-- -- -- -- -- -- -- -- -- --']
 
 function computeScore (game) {
-  if (game == NO_PIN_DOWN_GAME) {
+  if (game.toString() === NO_PIN_DOWN_GAME.toString()) {
     return 0
   }
 
