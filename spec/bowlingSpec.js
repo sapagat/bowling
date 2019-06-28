@@ -16,10 +16,12 @@ describe('Bowling', () => {
   })
 })
 
+const NO_PIN_DOWN_GAME = '-- -- -- -- -- -- -- -- -- --'
+
 function computeScore (pinsDown) {
-  if (pinsDown === '-- -- -- -- -- -- -- -- -- --') {
+  if (pinsDown === NO_PIN_DOWN_GAME) {
     return 0
-  } else {
-    return 1
   }
+
+  return 1
 }
